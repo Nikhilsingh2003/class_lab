@@ -1,0 +1,72 @@
+
+#include <iostream>
+#include<random>
+
+#include <ctime>
+
+#include <cstdlib>
+using namespace std;
+
+int main(){
+    //in one time it will run for 100 times then automatically it will exixt
+ for(int i=0;i<100;i++){
+  cout<<"Enter your choice 0-stone 1-paper 2-scissor"<<endl;
+  int user;
+  cout<<"Enter  your choice "<<endl;
+  cin>>user;
+  
+  //enetr -1 to close the game
+  if(user==-1)break;
+  int bot=0+rand()%3;
+  switch(user){
+      case 0:
+      cout<<" your choice is stone"<<endl;
+      break;
+      case 1:
+      cout<<" your choice is paper"<<endl;
+      break;
+      case 2:
+      cout<<" your choice is scissor"<<endl;
+      break;
+      default:
+      cout<<" enter a valid choice "<<endl;
+      
+  }
+    switch(bot){
+      case 0:
+      cout<<" bot choice is stone"<<endl;
+      break;
+      case 1:
+      cout<<" bot choice is paper"<<endl;
+      break;
+      case 2:
+      cout<<" bot choice is scissor"<<endl;
+      break;
+      default:
+      cout<<" enter a valid choice "<<endl;
+      
+  }
+cout<<"----------------------------------"<<endl;
+if(bot==user){
+    cout<<" Match Draw"<<endl;
+}
+if(bot==0&&user==1){
+    cout<<" you won "<<endl;
+}
+if(bot==1&&user==0){
+    cout<<" bot won "<<endl;
+}
+if(bot==0&&user==2){
+    cout<<" bot won "<<endl;
+}
+if(bot==2&&user==0){
+    cout<<" you won "<<endl;
+}
+if(bot==2&&user==1){
+    cout<<" bot won "<<endl;
+}
+if(bot==1&&user==2){
+    cout<<" you won "<<endl;
+}}
+    return 0;
+}
